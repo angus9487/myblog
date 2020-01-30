@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -93,9 +93,19 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/angus9487/angus9487.github.io
+  branch: master
+#Qiniu
+admin:
+  qiniuCfg:
+    imageslim: true  # 启动图片瘦身，仅华东区bucket可以使用
+    AccessKey: 'rqU9PHaI2Xxp-cSvb5tkySJf0yaA1-A5e7A6Mj6V'
+    SecretKey: 'V7SpeYYhWvq02b6MpArzaLrxit0N6I6m_uT24DB0'
+    BucketName: 'fsqblog'
+    bucketHost: 'q4xcpcdc6.bkt.clouddn.com'
